@@ -1,0 +1,52 @@
+.app__home-container {
+  line-height: 100px;
+  height: 938px;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.app__home-container button {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.app__home-title {
+  animation-name: slide-left;
+  animation-duration: 1s;
+}
+
+.app__home-button {
+
+  cursor: pointer;
+  outline: 0;
+  color: #fff;
+  background-color: #0d6efd;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  margin: 10px;
+}
+
+.app__home-button :hover {
+  font-size: 20px;
+  padding: 3px 6px;
+
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(-2000px)
+  }
+
+  to {
+    transform: translateX(0px)
+  }
+}

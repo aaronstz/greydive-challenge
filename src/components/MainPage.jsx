@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import logo from '../assets/simulacr-logo.png'
 import ReactPlayer from 'react-player';
 
-import './MainPage.css';
+import './styles/MainPage.css';
 
 const mainPage = (info) => {
 

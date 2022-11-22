@@ -1,0 +1,37 @@
+.app__container-notfound {
+    line-height: 100px;
+    height: 938px;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.app__title-notfound {
+    animation-name: slide-top;
+    animation-duration: 1s;
+}
+
+.app__button-notfound {
+    animation-name: appear;
+    animation-duration: 5s;
+}
+
+@keyframes appear {
+    from {
+        color: transparent;
+    }
+
+    to {
+        color: white;
+    }
+}
+
+@keyframes slide-top {
+    from {
+        transform: translateY(-1200px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
