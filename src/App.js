@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import { useEffect, useState } from 'react';
+
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import Db from './db.json'
@@ -11,20 +10,6 @@ import MainPage from './components/MainPage';
 
 
 function App() {
-
-  // const [items, setItems] = useState([]);
-
-  // useEffect(() => {
-  //   try {
-  //     fetch("db.json")
-  //     .then((response) => response.json())
-  //     .then((info) => setItems(info));
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }, [])
-
-
   return (
     <Router>
       <Routes>
@@ -35,7 +20,6 @@ function App() {
             key={item.id}
             path={`${item.cliente}`}
             element={<MainPage info={item}/>}
-            
             />
             
           ))
