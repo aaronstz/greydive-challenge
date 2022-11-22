@@ -1,24 +1,49 @@
 import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
+import Db from './db.json'
+
 import './App.css';
+import Home from './components/Home';
+import NotFound from './components/NotFound';
+import MainPage from './components/MainPage';
+
 
 function App() {
+
+  // const [items, setItems] = useState([]);
+
+  // useEffect(() => {
+  //   try {
+  //     fetch("db.json")
+  //     .then((response) => response.json())
+  //     .then((info) => setItems(info));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {
+          Db?.map((item) => (
+            
+            <Route
+            key={item.id}
+            path={`${item.cliente}`}
+            element={<MainPage info={item}/>}
+            
+            />
+            
+          ))
+        }
+        <Route path ="/" element = {<Home />} />
+        <Route path ="*" element = {<NotFound/>}/>
+      </Routes>
+    </Router>
   );
 }
 
